@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html ng-App="TVPremieresApp">
+<head>
+	<title>Generation Entrepreneur Signature Generator</title>
+	<!-- INCLUDE REQUIRED THIRD PARTY LIBRARY JAVASCRIPT AND CSS -->
+	<script type="text/javascript" src="js/angular.min.js"></script>
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/bootstrap-responsive.min.css">
+
+	<!-- INCLUDE APPLICATION SPECIFIC CSS AND JAVASCRIPT -->
+	<script type="text/javascript" src="js/tv-premieres-app/app.js"></script>
+	<script type="text/javascript" src="js/tv-premieres-app/controllers/mainController.js"></script>
+	<script src="https://cdn.rawgit.com/zenorocha/clipboard.js/master/dist/clipboard.min.js"></script>
+  	<script src="js/ngclipboard.min.js"></script>
+	<link rel="stylesheet" href="css/main.css">
+</head>
+<body ng-controller="mainController">
+    <div class='banner'>
+        <div class='container'>
+            <h1>Create Your Generation Entrepreneur Email Signature!</h1>
+        </div>
+    </div>
+	<div class='banner'>
+		<div class='container'>
+			<h3> Enter Your Details Below: </h3>
+		</div>
+		<div layout="row">
+			<form name="myForm" style="padding-left: 20px">
+			  <div flex>
+				  <label>Name:
+				    <input type="text" name="input" ng-model="name" placeholder='Karen Cho'
+				           required ng-trim="false">
+				  </label>
+			  </div>
+			  <div flex>
+				  <label>Position:
+				    <input type="text" name="input" ng-model="statement" ng-init="statement = 'Head of Operations'"
+				           required ng-trim="false">
+				  </label>
+			  </div>
+				  <div flex>
+				  <label>Phone Number:
+				    <input type="text" name="input" ng-model="phone" ng-init="phone = '+61 452 633 008'"
+				           required ng-trim="false">
+				  </label>
+				  </div>
+			 </form>
+		 </div>
+	</div>
+	<!--Div for the creation of the email signature -->
+<div id="foo" style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; background: white; margin-top: 150px">
+	<table border="0" cellpadding="0" cellspacing="0" >
+		<tr>
+			<td style="vertical-align: top;">
+				<img style="height: 45px" src="https://i.imgur.com/PGubBDN.png">
+			</td>
+			<td style="padding-left: 7px">
+				<table border="0" cellpadding="0" cellspacing="0" >
+					<tr>
+						<td style="padding-top: 4px">
+							<span style="font-size: 11pt; color: #333333" ng-init="name = 'Karen Cho'">
+								{{name}}
+							</span>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<span style="font-size: 10.5pt; color: #888888" ng-init="statement = 'Head of Operations'">{{statement}}</span>
+						</td>
+					</tr>
+					<tr>
+						<td style="padding-bottom: 1.5px; font-size: 10pt; color: #888888">
+							<span>
+								<a href="tel:+61452633008" style="color: #00d2cd; text-decoration: none" ng-init="phone = '+61 452 633 008'">{{phone}}</a> |
+								<a href="http://generationentrepreneur.com.au" style="color: #00d2cd; text-decoration: none">Our Website</a>
+							</span>
+						</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+	</table>
+
+</div>
+<p style="color:#ffffff; margin-left: 10px"><b><br>How to Use the Generator:</b><br>
+	1. Enter your details into the above fields. <br>
+	2. Double check that all your details, especially phone number, is correct.<br>
+	3. Highlight everything that appears in the white box (including the logo), which should have all your details, and copy it (Ctrl+C).<br>
+	4. Open your Gen E email inbox, on Gmail, and go to the settings icon > Settings. Scroll down to the 'Signature' subheading and paste (Ctrl+V) your signature into the box! Hit 'Save Changes' at the bottom of the page to confirm.<br>
+	5. Compose a new email to test it out!<br></p>
+</body>
+</html>
